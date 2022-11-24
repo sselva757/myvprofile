@@ -1,11 +1,12 @@
 pipeline {
     
 	agent any
-/*	
+	
 	tools {
         maven "maven3"
+        JDK "Java-JDK8"
     }
-*/	
+	
     environment {
 	SNAP_REPO = "project-maven"
 	NEXUS_USER = "admin"
