@@ -7,11 +7,14 @@ pipeline {
     }
 */	
     environment {
+	SNAP_REPO = "project-maven"
+	NEXUS_USER = "admin"
+	NEXUS_PASS = "admin"
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+        NEXUS_URL = "172.42.42.103:8081"
+        NEXUS_REPOSITORY = "project1-release"
+	NEXUS_REPOGRP_ID    = "project1-mavengroup"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
