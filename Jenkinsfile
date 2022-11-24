@@ -18,6 +18,8 @@ pipeline {
 	NEXUS_REPOGRP_ID    = "project1-mavengroup"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
+	SONARSERVER = 'sonarserver'
+        SONARSCANNER = 'sonarscanner'
     }
 	
     stages{
@@ -60,7 +62,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
           
 		  environment {
-             scannerHome = tool 'sonar'
+             scannerHome = tool 'SONARSCANNER'
           }
 
           steps {
